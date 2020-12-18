@@ -21,7 +21,7 @@ function install_environment_package()
 
 function install_mysql()
 {  verison="5.6.16" 
-   mysql_package='mysql-$verison.tar.gz'
+   mysql_package="mysql-$verison.tar.gz"
    download_url="http://dev.mysql.com/get/Downloads/MySQL-5.6/$mysql_package"
    cd ${installdir}
    if [ ! -f "$mysql_package" ];then
