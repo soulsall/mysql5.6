@@ -73,6 +73,7 @@ function install_mysql()
       echo "mysql is running ......"
    else
       /etc/init.d/mysqld start
+   
    fi
    
    mysql_status_check=`ps -aux|grep -vE 'grep|vim|tail|vi|.sh|cat'|grep mysql|grep mysql.pid` 
@@ -84,10 +85,6 @@ function install_mysql()
    else
       echo "mysql 启动失败,请排查原因......."
    fi
-   echo "mysql启动: /etc/init.d/mysqld start "
-   echo "mysql关闭: /etc/init.d/mysqld stop "
-   echo "mysql重启: /etc/init.d/mysqld restart "
-   echo "mysql运行状态: /etc/init.d/mysqld status "
 }
 
 install_environment_package
